@@ -1,15 +1,15 @@
 # Write your code here.
 
 def line(currentLine)
-  if deli.empty?
+  if currentLine.empty?
     puts "The line is currently empty."
   else
     lineAnnouncement = "The line is currently:"
     currentLine.each.with_index(1) do |customer, i|
-    lineAnnouncement << " #{i}, #{customer}"
+    lineAnnouncement << " #{i}. #{customer}"
+    end
+    puts lineAnnouncement
   end
-  puts currentLine
-end
 end
 
 def take_a_number(currentLine, newCustomer)
@@ -18,6 +18,10 @@ def take_a_number(currentLine, newCustomer)
 end
 
 def now_serving (currentLine)
+  if currentLine.empty?
+    puts "There is nobody waiting to be served!"
+  else
   currentCustomer = currentLine.shift
   puts "Currently serving #{currentCustomer}."
+end
 end
