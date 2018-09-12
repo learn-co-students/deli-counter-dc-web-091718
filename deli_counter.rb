@@ -13,9 +13,8 @@ end
 end
 
 def take_a_number(currentLine, newCustomer)
-  currentLine.push newCustomer
-  puts "Welcome, #{newCustomer}. You are number #{current + 1} in line."
-  return currentLine
+  currentLine << newCustomer
+  puts "Welcome, #{newCustomer}. You are number #{currentLine.length} in line."
 end
 
 def now_serving (currentLine)
